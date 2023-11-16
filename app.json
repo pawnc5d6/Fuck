@@ -1,0 +1,24 @@
+{
+  "name": "vcbot",
+  "description": "Telegram Bot deployed on Heroku",
+  "repository": "https://github.com/pawnc5d6/public",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Telegram bot token",
+      "required": false
+    }
+  },
+  "scripts": {
+    "start": "python main.py"
+  },
+"buildpacks": [
+  {
+    "url": "heroku/python",
+    "stack": "heroku-20",
+    "config": {
+      "python_version": "3.8.12"
+    }
+  }
+]
+
+}
